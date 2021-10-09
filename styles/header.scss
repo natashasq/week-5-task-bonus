@@ -1,0 +1,154 @@
+@use "fonts.scss";
+@use "elements.scss";
+@use "responsive.scss";
+
+$blue-color: #5267df;
+$solomon-color: #fa5959;
+$dark-grey-color: #242a45;
+$light-grey-color: #9194a2;
+$silver-color: #f7f7f7;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px 32px 80px 32px;
+  @include responsive.desktopScreen {
+    padding: 48px 165px 108px 171px;
+  }
+  &__navigation {
+    display: none;;
+    @include responsive.desktopScreen {
+      display: block;
+    }
+  }
+  &__navigation-link {
+    @include responsive.desktopScreen {
+      font-size: 13px;
+      line-height: 17px;
+      margin-right: 48px;
+      &:hover {
+        color: $solomon-color;
+      }
+    }
+  }
+  &__navigation-btn {
+    @include responsive.desktopScreen {
+      @include elements.btn;
+      background-color: $solomon-color;
+      color: white;
+      box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
+      padding: 12px 32px 11px 33px;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      line-height: 17px;
+      text-transform: uppercase;
+      font-weight: 500;
+      &:hover {
+        background-color: white;
+        border: solid 1px $solomon-color;
+        color: $solomon-color;
+      }
+    }
+  }
+  &__logo {
+    width: 149px;
+    height: 25px;
+  }
+  &__hamburger-icon {
+    width: 18px;
+    height: 15px;
+    @include responsive.desktopScreen {
+      display: none;
+    }
+  }
+
+  &__navigation-mobile {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(32.6194px);
+    background-color: #242a45;
+    z-index: 0;
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #ffffff;
+    opacity: 0.95;
+    padding: 40px 34px 48px 33px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__navigation-logo {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+  }
+  &__navigation-icon-close {
+    height: 14.85px;
+    width: 14.85px;
+  }
+  &__navigation-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__navigation-link-mobile {
+    font-size: 20px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 2.31x;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 24px 0;
+    padding: 24px 0;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+    width: 100%;
+  }
+  &__navigation-btn-mobile {
+    border: solid 1px white;
+    background-color: transparent;
+    padding: 16px 0;
+    font-size: 20px;
+    line-height: 17px;
+    text-align: right;
+    letter-spacing: 2.30769px;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 24px;
+  }
+
+  &__navigation-social {
+    margin: 219px auto;
+    width: 88px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__navigation-icon-twitter {
+    height: 19.5px;
+  }
+
+  .logo-letters {
+    fill: white;
+  }
+  .logo-sign {
+    fill: white;
+  }
+  .logo-sign-fill {
+    fill: $dark-grey-color;
+  }
+
+  .-navigation-none {
+    display: none;
+  }
+  .-display-none {
+    display: none;
+  }
+
+
+}

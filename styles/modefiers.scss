@@ -1,0 +1,157 @@
+@use "fonts.scss";
+@use "elements.scss";
+@use "responsive.scss";
+
+$blue-color: #5267df;
+$solomon-color: #fa5959;
+$dark-grey-color: #242a45;
+$light-grey-color: #9194a2;
+$silver-color: #f7f7f7;
+
+.-silver-btn {
+  background-color: $silver-color;
+  color: $dark-grey-color;
+  padding: 10px 17px;
+  margin-left: 14px;
+  &:hover {
+    color: $dark-grey-color;
+    background-color: white;
+    border: solid 1px $dark-grey-color;
+    opacity: 0.75;
+  }
+}
+
+.-btn-padding {
+  padding: 8.85px 15.74px 8.85px 16.74px;
+  margin-right: 16px;
+}
+
+.-left-background-1 {
+  top: 34px;
+  left: -300px;
+  @include responsive.desktopScreen {
+    width: 1000px;
+    height: 352px;
+    top: 83px;
+    bottom: unset;
+    right: unset;
+    left: -529px;
+  }
+}
+
+.-left-background {
+  top: 34px;
+  left: -350px;
+  @include responsive.desktopScreen {
+    width: 1000px;
+    height: 352px;
+    top: 83px;
+    bottom: unset;
+    right: unset;
+    left: -612px;
+  }
+}
+
+.-bottom-text {
+  margin-bottom: 15px;
+  max-width: 540px;
+}
+
+.-slide-2 {
+  @include responsive.desktopScreen {
+    margin: 0 165px 164px 244px;
+  }
+}
+
+.-slide-none {
+  display: none;
+}
+
+.-width {
+  width: 100%;
+}
+
+.-margin-right {
+  margin-right: 44px;
+}
+
+.-bottom-text {
+  @include responsive.desktopScreen {
+    text-align: left;
+    margin-bottom: 32px;
+  }
+}
+
+.-card-2 {
+  @include responsive.desktopScreen {
+    margin-top: 50px;
+  }
+}
+
+.-card-3 {
+  @include responsive.desktopScreen {
+    margin-top: 100px;
+  }
+}
+
+.-footer-btn {
+  background-color: $solomon-color;
+  width: 100%;
+  text-align: center;
+  height: 48px;
+  margin-top: 16px;
+  max-width: 480px;
+  &:hover {
+    color: $solomon-color;
+    background-color: white;
+    border: solid 1px $solomon-color;
+  }
+  @include responsive.desktopScreen {
+    padding: 10px 24px;
+    width: 126px;
+    margin-left: 16px;
+    margin-top: 0;
+  }
+}
+
+.-item-2 {
+  ::after {
+    background-color: transparent;
+  }
+}
+
+.-item-3 {
+  ::after {
+    background-color: transparent;
+  }
+}
+
+.arrow {
+  margin-left: 23px;
+}
+
+.-red-arrow {
+  stroke: #fa5959;
+}
+
+.-rotate-arrow {
+  transform: rotate(180deg);
+}
+
+.-error-message {
+  background-color: $solomon-color;
+  padding: 2px;
+  border-radius: 5px;
+  position: relative;
+  max-width: 480px;
+}
+
+.-container-2 {
+  @include responsive.desktopScreen {
+    margin-right: 118px;
+  }
+}
+
+.-header-none {
+  display: none;
+}

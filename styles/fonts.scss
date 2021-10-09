@@ -1,0 +1,48 @@
+@use "responsive.scss";
+
+$blue-color: #5267df;
+$solomon-color: #fa5959;
+$dark-grey-color: #242a45;
+$light-grey-color: #9194a2;
+
+@mixin h1 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: -0.09375px;
+  color: $dark-grey-color;
+}
+
+@mixin h2 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 52px;
+  text-align: center;
+  color: $dark-grey-color;
+  @include responsive.desktopScreen {
+    font-size: 32px;
+  }
+}
+
+@mixin h3 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: $dark-grey-color;
+  letter-spacing: 0.25px;
+}
+
+@mixin body {
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: $dark-grey-color;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  @include responsive.desktopScreen {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
