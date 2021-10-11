@@ -1,0 +1,344 @@
+@use "fonts.scss";
+@use "elements.scss";
+@use "responsive.scss";
+
+
+$blue-color: #5267df;
+$solomon-color: #fa5959;
+$dark-grey-color: #242a45;
+$light-grey-color: #9194a2;
+$silver-color: #f7f7f7;
+
+.page {
+  padding: 0 32px;
+  @include responsive.desktopScreen {
+    padding: 0;
+  }
+  &__hero {
+    padding-bottom: 140px;
+    @include responsive.tabletScreen {
+      padding-bottom: 0;
+    }
+  }
+  &__hero-image-wrapper {
+    position: relative;
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include responsive.tabletScreen {
+      margin-bottom: 121px;
+      align-items: end;
+    }
+  }
+  &__hero-image {
+    width: 112%;
+    z-index: -1;
+    @include responsive.tabletScreen {
+      width: 646px;
+      padding-left: 100px;
+      height: auto;
+    }
+    @include responsive.desktopScreen {
+      width: 646px;
+      height: 446px;
+      margin-right: 40.5px;
+      padding: 0;
+    }
+  }
+  &__hero-content {
+    @include responsive.desktopScreen {
+      display: none;
+    }
+  }
+  &__hero-title {
+    @include fonts.h1;
+    margin-bottom: 16px;
+  }
+  &__hero-text {
+    @include fonts.body;
+    margin-bottom: 32px;
+  }
+  &__hero-btn-container {
+    display: flex;
+    justify-content: center;
+  }
+  &__btn {
+    @include elements.btn;
+  }
+
+  &__features {
+    position: relative;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__features-title {
+    @include fonts.h2;
+    @include responsive.desktopScreen {
+      margin-bottom: 16px;
+      text-align: left;
+    }
+  }
+  &__features-text {
+    @include fonts.body;
+    margin-bottom: 40px;
+    max-width: 445px;
+    @include responsive.desktopScreen {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 540px;
+      margin-bottom: 32px;
+    }
+  }
+  &__features-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 72px;
+    width: 100%;
+    @include responsive.desktopScreen {
+      flex-direction: row;
+      max-width: 730px;
+      margin: 0 auto;
+      margin-bottom: 72px;
+    }
+  }
+  &__features-menu-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  &__features-menu-item {
+    @include fonts.body;
+    opacity: 0.8;
+    font-size: 16px;
+    line-height: 17px;
+    font-weight: 400;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(73, 93, 207, 0.20012);
+
+    //transform: matrix(1, 0, 0, -1, 0, 0);
+    &:hover {
+      opacity: unset;
+      cursor: pointer;
+      &::after {
+        content: "";
+        background-color: #fa5959;
+        height: 4px;
+        width: 143px;
+        margin: 0 auto;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: -22px;
+      }
+    }
+  }
+  &__features-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include responsive.desktopScreen {
+      flex-direction: revert;
+      margin: 0 165px 238px 169px;
+    }
+  }
+  &__features-image-wrapper {
+    position: relative;
+    margin-bottom: 69px;
+  }
+  &__features-slide1-img {
+    width: 100%;
+    @include responsive.desktopScreen {
+      width: 536px;
+      height: 346px;
+    }
+  }
+  &__features-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 77px;
+    @include responsive.desktopScreen {
+      align-items: baseline;
+      margin-left: 125px;
+    }
+  }
+
+  &__features-slide2-img {
+    width: 296px;
+    height: 246px;
+    @include responsive.desktopScreen {
+      width: 468px;
+      height: 393px;
+    }
+  }
+  &__features-slide3-img {
+    width: 296px;
+    height: 246px;
+    @include responsive.desktopScreen {
+      width: 440px;
+      height: 380px;
+    }
+  }
+
+  &__download-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    @include responsive.desktopScreen {
+      margin-bottom: 36px;
+    }
+  }
+  &__download-title {
+    @include fonts.h2;
+    @include responsive.desktopScreen {
+      margin-bottom: 16px;
+    }
+  }
+  &__download-text {
+    @include fonts.body;
+    @include responsive.desktopScreen {
+      max-width: 540px;
+    }
+  }
+
+  &__download-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include responsive.desktopScreen {
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 149px;
+    }
+  }
+  &__download-card {
+    padding: 49px 24px 24px 24px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.20012);
+    border-radius: 15px;
+    width: 280px;
+    @include responsive.desktopScreen {
+      margin-bottom: 0;
+      margin-right: 34px;
+    }
+  }
+  &__download-card-logo {
+    margin-bottom: 32px;
+  }
+  &__download-card-title {
+    @include fonts.h3;
+    margin-bottom: 6px;
+  }
+  &__download-card-text {
+    @include fonts.body;
+    margin-bottom: 32px;
+  }
+  &__download-card-dots {
+    margin-bottom: 24px;
+  }
+
+  &__background {
+    background-color: #5267df;
+    border-radius: 316.5px;
+    height: 203px;
+    width: 577px;
+    position: absolute;
+    z-index: -1;
+    bottom: -6px;
+    left: 61px;
+    z-index: -2;
+    @include responsive.tabletScreen {
+      width: 1000px;
+      height: 352px;
+      right: -507px;
+      bottom: -41px;
+      left: unset;
+    }
+  }
+
+  &__FAQ {
+    padding-top: 100px;
+    padding-bottom: 123px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__FAQ-title {
+    @include fonts.h2;
+    line-height: 30px;
+    letter-spacing: -0.075px;
+    margin-bottom: 16px;
+  }
+  &__FAQ-text {
+    @include fonts.body;
+    margin-bottom: 64px;
+    @include responsive.desktopScreen {
+      max-width: 540px;
+      margin-bottom: 56px;
+    }
+  }
+  &__FAQ-container {
+    margin-bottom: 48px;
+    @include responsive.desktopScreen {
+      width: 540px;
+      margin-bottom: 54px;
+    }
+  }
+  &__FAQ-question {
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    min-height: 32px;
+    align-items: center;
+    border: none;
+    background: transparent;
+    @include fonts.body;
+    line-height: 32px;
+    opacity: unset;
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(73, 93, 207, 0.20012);
+    text-align: left;
+    &:hover {
+      color: $solomon-color;
+    }
+    @include responsive.desktopScreen {
+      margin-bottom: 19px;
+    }
+  }
+  &__FAQ-question-arrow {
+    height: 8px;
+    width: 16px;
+    margin-left: 19px;
+  }
+  &__FAQ-answer {
+    @include fonts.body;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+}
+
+.-silver-btn {
+  background-color: $silver-color;
+  color: $dark-grey-color;
+  padding: 10px 17px;
+  &:hover {
+    color: $dark-grey-color;
+    background-color: white;
+    border: solid 1px $dark-grey-color;
+    opacity: 0.75;
+  }
+}

@@ -1,0 +1,160 @@
+@use "fonts.scss";
+@use "elements.scss";
+@use "responsive.scss";
+
+
+$blue-color: #5267df;
+$solomon-color: #fa5959;
+$dark-grey-color: #242a45;
+$light-grey-color: #9194a2;
+$silver-color: #f7f7f7;
+
+.footer {
+  &__form-container {
+    background-color: $blue-color;
+    padding: 60px 32px;
+    @include responsive.desktopScreen {
+      padding: 58px 0 74px 0;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 40px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4.62px;
+    width: 100%;
+    @include responsive.desktopScreen {
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+  }
+  &__title {
+    @include fonts.h2;
+    color: white;
+    line-height: 28px;
+    font-weight: 500;
+    margin-bottom: 32px;
+    @include responsive.desktopScreen {
+      line-height: 40px;
+      max-width: 408px;
+      margin: 0 auto;
+      margin-bottom: 36px;
+      font-weight: 500;
+      font-size: 32px;
+      text-align: center;
+      letter-spacing: -0.1px;
+    }
+  }
+  &__form-message {
+    background-color: transparent;
+  }
+  &__form-message-text {
+    font-size: 10px;
+    line-height: 11.85px;
+    font-weight: 500;
+    color: white;
+    margin: 4px auto 6px 12px;
+    font-style: italic;
+    height: 12px;
+    letter-spacing: 0.25px;
+  }
+  &__form {
+    margin: 0 auto;
+    max-width: 480px;
+    @include responsive.desktopScreen {
+      display: flex;
+      max-width: 442px;
+      justify-content: space-between;
+    }
+  }
+  &__input {
+    height: 48px;
+    outline: none;
+    width: 100%;
+    padding: 10px 20px;
+    border: transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 28px;
+    max-width: 480px;
+    color: $dark-grey-color;
+    &::placeholder {
+      color: #c4c4c4;
+    }
+    @include responsive.desktopScreen {
+      margin-bottom: 0;
+      width: 300px;
+    }
+  }
+  &__form-input-mark {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+  }
+  &__navigation {
+    padding: 40px 114px 43px 113px;
+    background-color: #242a45;
+    @include responsive.desktopScreen {
+      display: flex;
+      padding: 32px 165px;
+    }
+  }
+  &__navigation-logo {
+    margin-bottom: 39px;
+    @include responsive.desktopScreen {
+      margin-right: 63px;
+      margin-bottom: 0;
+    }
+  }
+  &__navigation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include responsive.desktopScreen {
+      flex-direction: row;
+    }
+  }
+  &__navigation-link {
+    @include fonts.body;
+    line-height: 17px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    color: white;
+    &:hover {
+      color: $solomon-color;
+    }
+    @include responsive.desktopScreen {
+      margin-right: 44px;
+      margin-bottom: 0;
+    }
+  }
+  &__social {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 148px;
+    margin: 0 auto;
+    @include responsive.desktopScreen {
+      margin: 0 0 0 auto;
+      width: 88px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__social-icon-fb {
+    height: 24px;
+    width: 24px;
+  }
+  &__social-icon-twitter {
+    height: 19.5px;
+    width: 24px;
+  }
+  &__logo-letters {
+    fill: white;
+  }
+}
